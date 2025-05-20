@@ -98,22 +98,18 @@ Then open your browser and go to: http://127.0.0.1:5000/
 ```
 ## 🖼️ Screenshots
 Located in the results/ folder:
-## 📸 Screenshots
-
-### 🌤️ Weather Dashboard UI (Clear Weather)
-![Clear](results/result1.png)
-
-### 🌧️ Weather UI (Rainy Background)
-![Rain](results/result2.png)
-
-### ⚠️ Error Page (Invalid Input or City Not Found)
-![Error](results/result3.png)
 
 ### 🧪 Application Interface Overview
 ![Interface](results/result5.png)
 
+### 🌧️ Clear Weather 
+![Rain](results/result2.png)
+
 ### ☁️ Cloudy Weather View
 ![Cloudy](results/result6.png)
+
+### ☁️ Rainy Weather View
+![Cloudy](results/result3.png)
 
 ### ❄️ Snow Weather UI
 ![Snow](results/result8.png)
