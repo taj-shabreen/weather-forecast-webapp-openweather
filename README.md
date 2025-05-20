@@ -49,7 +49,7 @@ weather_forecast_app/
 ---
 
 ## 🚀 Features
-
+- 📅 Displays 5-day weather forecast with detailed temperature, humidity, and condition updates.
 - 🔍 Fetches real-time 5-day weather forecasts based on user input (city & country).
 - 🎨 Dynamic background changes for weather types: Clear, Cloudy, Rain, Thunderstorm, Snow, etc.
 - ✅ Input validation and clean error messaging.
@@ -103,16 +103,19 @@ Located in the results/ folder:
 ![Interface](results/result5.png)
 
 ### 🌧️ Clear Weather 
-![Rain](results/result2.png)
+![clear](results/result2.png)
 
 ### ☁️ Cloudy Weather View
 ![Cloudy](results/result6.png)
 
 ### ☁️ Rainy Weather View
-![Cloudy](results/result3.png)
+![Rainy](results/result.3.png)
 
 ### ❄️ Snow Weather UI
 ![Snow](results/result8.png)
+
+### 📅 5-Day Forecast View
+![5-Day Forecast](results/result10.png)
 
 ### ❌ City Not Found Response
 ![Not Found](results/result7.png)
@@ -147,12 +150,22 @@ Dockerize the application for seamless deployment, portability, and team collabo
 
 🌐 HTML5 & CSS3 – Semantic, responsive UI layout
 
-⚡ JavaScript (Vanilla) – Dynamic frontend behavior and interactivity
+⚡ JavaScript  – Dynamic frontend behavior and interactivity
 
-🎨 CSS Animations & Lottie – Weather-based theme transitions
+🎨 CSS Animations  – Weather-based theme transitions
 
 🔐 python-dotenv – Environment variable and API key security
 
 🌍 Requests – HTTP client for handling REST API communication
 
 📦 requirements.txt – Python dependency management
+
+
+## 👨‍🚀 About the Author
+Hey there! I'm Shabreen Taj — a developer, dreamer, and digital tinkerer on a mission to fuse code with creativity.
+
+  📫 Let's connect: [GitHub @taj-shabreen](https://github.com/taj-shabreen)
+
+## 🌟 Show Your Support
+If this project inspired you, helped you, or just looked cool —
+ give it a ⭐ star on GitHub!
