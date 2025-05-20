@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Weather Forecast for {{ city_name }}</title>
+    <!-- Corrected CSS path -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <div id="weather-background" class="weather-bg">
+    <main>
+      <h1>🌦️ Weather Forecast for {{ city_name }}</h1>
+
+      {% if forecast_data %}
+        <div class="forecast-grid">
+          {% for item in forecast_data['list'] %}
+            <div class="weather-card">
+              <p><strong>{{ item.dt_txt.split(' ')[0] }} {{ item.dt_txt.split(' ')[1][:5] }}</strong></p>
+              <img src="https://openweathermap.org/img/wn/{{ item.weather[0].icon }}@2x.png" alt="{{ item.weather[0].description }}" />
+              <p>{{ item.weather[0].description | title }}</p>
+              <p>🌡️ Temp: {{ item.main.temp | round(1) }} °C</p>
+              <p>💧 Humidity: {{ item.main.humidity }}%</p>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p>❌ No forecast data available.</p>
+      {% endif %}
+
+      <br />
+      <a href="{{ url_for('index') }}">🔙 Back to Search</a>
+    </main>
+
+    <footer>
+      © 2025 Weather Forecast Portal | Powered by OpenWeatherMap & AI
+    </footer>
+  </div>
+
+  <!-- Include your JS file for animations -->
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  <!-- Include GSAP if used in your animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</body>
+</html>

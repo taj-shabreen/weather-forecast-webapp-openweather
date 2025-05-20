@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+env/
+venv/
+.venv/
+
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Log files
+*.log
+
+# Byte-compiled / compiled files
+*.pyo
+*.pyd
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Cache
+*.cache

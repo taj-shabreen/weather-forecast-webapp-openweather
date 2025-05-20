@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather Forecast Portal</title>
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+  <!-- GSAP Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="{{ background_class }}">
+  <!-- Particles & Background -->
+  <div id="particles-js"></div>
+  <div id="weather-background"></div>
+
+  <div class="container">
+    <main>
+      <h1 class="title">🌤️ Weather Forecast Portal</h1>
+
+      <form id="city-form" method="POST" action="{{ url_for('index') }}">
+        <input type="text" id="city-input" name="city" placeholder="Enter city name" required autocomplete="off" />
+        <input type="text" id="country-input" name="country" placeholder="Enter country (e.g. IN)" required autocomplete="off" />
+        <button type="submit">Get Forecast</button>
+      </form>
+
+      {% if error %}
+        <p class="error-message">{{ error }}</p>
+      {% endif %}
+
+      <section id="current-weather"></section>
+
+      <button id="more-btn" class="hidden">More</button>
+
+      <section id="forecast" class="hidden">
+        <h2>Hourly & 5-Day Forecast</h2>
+        <div id="forecast-content"></div>
+      </section>
+    </main>
+
+    <footer style="text-align: center; padding: 1em 0; background-color: #f2f2f2; font-size: 0.9em;">
+    © 2025 Weather Forecast Portal | Powered by OpenWeatherMap & AI<br>
+    <span class="credit">
+      Developed by <a href="https://github.com/taj-shabreen" target="_blank">Shabreen Taj</a>
+    </span>
+  </footer>
+
+  </div>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS.load('particles-js', '/static/animations/particles.json', function () {
+      console.log('Particles.js loaded.');
+    });
+  </script>
+
+  <!-- Main script -->
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

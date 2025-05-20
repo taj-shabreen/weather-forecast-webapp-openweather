@@ -1,0 +1,177 @@
+/* === General Styles === */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+}
+body.default-bg {
+  background-image: url('../images/default.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 40px;
+  color: #222;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* === Background Layers === */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind everything */
+}
+
+#weather-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* Behind particles */
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+/* === Form Styles === */
+form {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 10px 5px 20px 0;
+  width: calc(50% - 10px);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* === Weather Card Styles === */
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  text-align: center;
+}
+
+.weather-card h2,
+.weather-card h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.weather-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* === Error Message === */
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* === Forecast Section === */
+#forecast {
+  max-width: 700px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+#forecast.hidden {
+  display: none;
+}
+
+/* === Hidden Utility === */
+.hidden {
+  display: none;
+}
+
+/* === More Button === */
+#more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#more-btn:hover {
+  background-color: #0056b3;
+}
+footer {
+  text-align: center;
+  font-size: 1rem;
+  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #333;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+}
+
+footer .credit {
+  font-size: 0.95rem;
+  margin-top: 5px;
+  display: inline-block;
+  color: #444;
+}
+
+footer .credit a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer .credit a:hover {
+  text-decoration: underline;
+}
