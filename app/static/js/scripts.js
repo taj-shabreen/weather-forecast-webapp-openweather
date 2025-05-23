@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const weatherBackground = document.getElementById("weather-background");
   const moreButton = document.getElementById("more-btn");
 
-  const apiKey = "94e0595c3c16178668421cee9ab6a535";
+  const apiKey = "YUOR_API_KEY_HERE";
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
